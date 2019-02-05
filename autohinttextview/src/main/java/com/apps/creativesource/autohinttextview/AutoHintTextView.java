@@ -18,9 +18,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AutoHintTextView extends LinearLayout {
 
+    Matcher matcher;
+    Pattern pattern;
     Paint paint;
     Rect rect;
     int squareColor, entryEnd;
@@ -96,9 +100,11 @@ public class AutoHintTextView extends LinearLayout {
     }
 
     private String searchStrings(String s) {
+        pattern = Pattern.compile("^" + s);
         if(!s.equals("")) {
             for (String i : suggestions) {
-                if (i.contains(s)) {
+                matcher = pattern.matcher(i);
+                if (matcher.find()) {
                     return i;
                 }
             }
