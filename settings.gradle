@@ -1,1 +1,1 @@
-include ':autohinttextview', ':app'
+include ':autohinttextview', ':sample:app'
