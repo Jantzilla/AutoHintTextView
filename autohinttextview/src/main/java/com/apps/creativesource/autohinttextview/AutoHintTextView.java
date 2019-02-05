@@ -74,7 +74,7 @@ public class AutoHintTextView extends LinearLayout {
                 if(wordToSpan.length() > 0) {
                     wordToSpan.setSpan(new ForegroundColorSpan(Color.GRAY), entryEnd, wordToSpan.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
                     hintEditText.setText(wordToSpan);
-                } if(count == 0 || wordToSpan.length() == 0)
+                } if(wordToSpan.length() == 0)
                     hintEditText.setText("");
 
             }
