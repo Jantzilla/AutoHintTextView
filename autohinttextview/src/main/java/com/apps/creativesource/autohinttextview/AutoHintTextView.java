@@ -96,9 +96,11 @@ public class AutoHintTextView extends LinearLayout {
     }
 
     private String searchStrings(String s) {
-        for(String i : suggestions) {
-            if(i.contains(s)) {
-                return i;
+        if(!s.equals("")) {
+            for (String i : suggestions) {
+                if (i.contains(s)) {
+                    return i;
+                }
             }
         }
         return "";
