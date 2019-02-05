@@ -94,4 +94,17 @@ public class AutoHintTextView extends LinearLayout {
         ta.recycle();
 
     }
+
+    private String searchStrings(String s) {
+        for(String i : suggestions) {
+            if(i.contains(s)) {
+                return i;
+            }
+        }
+        return "";
+    }
+
+    public void setSuggestions(ArrayList<String> suggestions) {
+        this.suggestions.addAll(suggestions);
+    }
 }
