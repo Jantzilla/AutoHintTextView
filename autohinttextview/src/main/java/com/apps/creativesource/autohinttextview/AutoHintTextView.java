@@ -30,6 +30,7 @@ public class AutoHintTextView extends LinearLayout {
     int squareColor, entryEnd;
     private EditText hintEditText, entryEditText;
     private ArrayList<String> suggestions;
+    private String textHint;
 
     public AutoHintTextView(Context context) {
         super(context);
@@ -94,6 +95,7 @@ public class AutoHintTextView extends LinearLayout {
 
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
         squareColor = ta.getColor(R.styleable.AutoHintTextView_square_color, Color.WHITE);
+        textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "entry";
         paint.setColor(squareColor);
         ta.recycle();
 
