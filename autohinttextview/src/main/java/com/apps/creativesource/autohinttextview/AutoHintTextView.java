@@ -97,6 +97,7 @@ public class AutoHintTextView extends LinearLayout {
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
         textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "entry";
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
+        entryEditText.setHint(textHint);
         ta.recycle();
 
     }
