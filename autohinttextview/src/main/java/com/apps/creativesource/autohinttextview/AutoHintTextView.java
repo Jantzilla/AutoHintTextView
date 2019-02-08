@@ -31,6 +31,7 @@ public class AutoHintTextView extends LinearLayout {
     private EditText hintEditText, entryEditText;
     private ArrayList<String> suggestions;
     private String textHint;
+    private boolean caseSensitive;
 
     public AutoHintTextView(Context context) {
         super(context);
@@ -95,6 +96,7 @@ public class AutoHintTextView extends LinearLayout {
 
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
         textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "entry";
+        caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
         ta.recycle();
 
     }
