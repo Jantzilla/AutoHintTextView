@@ -99,6 +99,8 @@ public class AutoHintTextView extends LinearLayout {
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
         textSize = ta.getDimensionPixelSize(R.styleable.AutoHintTextView_android_textSize, (int) (18 * getResources().getDisplayMetrics().scaledDensity));
         entryEditText.setHint(textHint);
+        entryEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
+        hintEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
         ta.recycle();
 
     }
