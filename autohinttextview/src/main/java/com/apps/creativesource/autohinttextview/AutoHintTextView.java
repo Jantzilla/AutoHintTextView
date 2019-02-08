@@ -27,7 +27,7 @@ public class AutoHintTextView extends LinearLayout {
     Pattern pattern;
     Paint paint;
     Rect rect;
-    int entryEnd;
+    int entryEnd, textSize;
     private EditText hintEditText, entryEditText;
     private ArrayList<String> suggestions;
     private String textHint;
@@ -97,6 +97,7 @@ public class AutoHintTextView extends LinearLayout {
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
         textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "entry";
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
+        textSize = ta.getDimensionPixelSize(R.styleable.AutoHintTextView_android_textSize, (int) (18 * getResources().getDisplayMetrics().scaledDensity));
         entryEditText.setHint(textHint);
         ta.recycle();
 
