@@ -104,6 +104,8 @@ public class AutoHintTextView extends LinearLayout {
         entryEditText.setHint(textHint);
         entryEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
         hintEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
+        entryEditText.setGravity(textGravity);
+        hintEditText.setGravity(textGravity);
         ta.recycle();
 
     }
