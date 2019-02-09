@@ -4,5 +4,6 @@
         <attr name="hint" format="string"/>
         <attr name="caseSensitive" format="boolean"/>
         <attr name="android:textSize" format="dimension"/>
+        <attr name="android:textColor" format="color"/>
     </declare-styleable>
 </resources>
