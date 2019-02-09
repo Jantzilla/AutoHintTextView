@@ -5,5 +5,6 @@
         <attr name="caseSensitive" format="boolean"/>
         <attr name="android:textSize" format="dimension"/>
         <attr name="android:textColor" format="color"/>
+        <attr name="android:gravity"/>
     </declare-styleable>
 </resources>
