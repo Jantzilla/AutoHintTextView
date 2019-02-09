@@ -102,6 +102,7 @@ public class AutoHintTextView extends LinearLayout {
         textGravity = ta.getInteger(R.styleable.AutoHintTextView_android_gravity, Gravity.START);
         textSize = ta.getDimensionPixelSize(R.styleable.AutoHintTextView_android_textSize, (int) (18 * getResources().getDisplayMetrics().scaledDensity));
         entryEditText.setHint(textHint);
+        entryEditText.setTextColor(textColor);
         entryEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
         hintEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
         entryEditText.setGravity(textGravity);
