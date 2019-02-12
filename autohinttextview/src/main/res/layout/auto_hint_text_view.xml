@@ -7,6 +7,8 @@
     android:id="@+id/et_hint"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:focusable="false"
+    android:clickable="false"
     android:padding="8dp"
     android:textColor="@android:color/transparent"/>
 
