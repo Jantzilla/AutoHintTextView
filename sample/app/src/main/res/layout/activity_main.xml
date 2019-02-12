@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         app:hint="Type a color"
+        app:caseSensitive="false"
         android:entries="@array/colors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
