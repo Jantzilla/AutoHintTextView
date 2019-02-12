@@ -26,11 +26,13 @@ public class MainActivity extends AppCompatActivity {
         suggestions = new ArrayList<>();
 
         suggestions.add("Blue");
+        suggestions.add("Cyan");
         suggestions.add("Green");
         suggestions.add("Magenta");
         suggestions.add("Red");
         suggestions.add("Gray");
         suggestions.add("Yellow");
+        suggestions.add("White");
 
         autoHintTextView.setSuggestions(suggestions);
 
