@@ -24,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -145,6 +146,10 @@ public class AutoHintTextView extends LinearLayout {
 
     public void setSuggestions(ArrayList<String> suggestions) {
         this.suggestions.addAll(suggestions);
+    }
+
+    public void setSuggestions(int resId) {
+        suggestions = new ArrayList<>(Arrays.asList(getResources().getStringArray(resId)));
     }
 
     public void addHintChangedListener(TextWatcher textWatcher) {
