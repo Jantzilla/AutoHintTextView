@@ -9,12 +9,9 @@ import android.text.TextWatcher;
 
 import com.creativesourceapps.android.autohinttextview.AutoHintTextView;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
     ConstraintLayout root;
     AutoHintTextView autoHintTextView;
-    ArrayList<String> suggestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         autoHintTextView = findViewById(R.id.tv_auto_hint);
         root = findViewById(R.id.cl_root);
-
-        suggestions = new ArrayList<>();
-
-        suggestions.add("Blue");
-        suggestions.add("Cyan");
-        suggestions.add("Green");
-        suggestions.add("Magenta");
-        suggestions.add("Red");
-        suggestions.add("Gray");
-        suggestions.add("Yellow");
-        suggestions.add("White");
-
-        autoHintTextView.setSuggestions(suggestions);
 
         autoHintTextView.addHintChangedListener(new TextWatcher() {
             @Override
@@ -44,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+
                 switch (String.valueOf(s)) {
                     case "Blue":
                         root.setBackgroundColor(Color.BLUE);
