@@ -10,7 +10,7 @@ dependencies {
 }
 ```
 
-#### In your XML layout
+### In your XML layout
 ```Xml
 <com.creativesource.autohinttextview.AutoHintTextView
     android:id="@+id/tv_auto_hint"
@@ -27,7 +27,7 @@ dependencies {
 | `caseSensitive` | Whether or not text case is a suggestion factor |
 | `setSuggestions` | Location of suggestion resource array |
 
-#### In your Java code
+### In your Java code
 ```Java
     autoHintTextView = (AutoHintTextView) findViewById(R.id.tv_auto_hint);
     ArrayList<String> suggestions = new ArrayList<>();
