@@ -1,6 +1,7 @@
 package com.creativesourceapps.android.autohinttextview;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
@@ -14,11 +15,13 @@ import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-
-import com.creativesourceapps.android.autohinttextview.R;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -66,6 +69,20 @@ public class AutoHintTextView extends LinearLayout {
 
         hintEditText = findViewById(R.id.et_hint);
         entryEditText = findViewById(R.id.et_entry);
+
+        entryEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if(actionId == EditorInfo.IME_ACTION_DONE) {
+                    entryEditText.setText(hintEditText.getText().toString());
+                    entryEditText.setSelection(entryEditText.getText().length());
+                    InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getWindowToken(), 0);
+                    return true;
+                }
+                return false;
+            }
+        });
 
         entryEditText.addTextChangedListener(new TextWatcher() {
 
