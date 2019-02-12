@@ -1,4 +1,4 @@
-package com.apps.creativesource.autohinttextview;
+package com.creativesourceapps.android.autohinttextview;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -17,6 +17,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+
+import com.creativesourceapps.android.autohinttextview.R;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

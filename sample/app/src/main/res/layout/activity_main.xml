@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.creativesourceapps.android.app.MainActivity">
 
-    <com.apps.creativesource.autohinttextview.AutoHintTextView
+    <com.creativesourceapps.android.autohinttextview.AutoHintTextView
         android:id="@+id/tv_auto_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.apps.creativesource.autohinttextview;
+package com.creativesourceapps.android.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.apps.creativesource.autohinttextview.test", appContext.getPackageName());
+        assertEquals("com.creativesourceapps.android", appContext.getPackageName());
     }
 }

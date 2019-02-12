@@ -1,4 +1,4 @@
-package com.apps.creativesource.app;
+package com.creativesourceapps.android.app;
 
 import org.junit.Test;
 

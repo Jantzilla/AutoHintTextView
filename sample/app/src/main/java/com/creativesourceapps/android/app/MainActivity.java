@@ -1,9 +1,10 @@
-package com.apps.creativesource.app;
+package com.creativesourceapps.android.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.apps.creativesource.autohinttextview.AutoHintTextView;
+import com.creativesourceapps.android.app.R;
+import com.creativesourceapps.android.autohinttextview.AutoHintTextView;
 
 import java.util.ArrayList;
 
