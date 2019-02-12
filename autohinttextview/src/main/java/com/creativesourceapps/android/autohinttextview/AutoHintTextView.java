@@ -115,7 +115,7 @@ public class AutoHintTextView extends LinearLayout {
             return;
 
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
-        textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "entry";
+        textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "hint";
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
         textColor = ta.getColor(R.styleable.AutoHintTextView_android_textColor, Color.BLACK);
         textGravity = ta.getInteger(R.styleable.AutoHintTextView_android_gravity, Gravity.START);
