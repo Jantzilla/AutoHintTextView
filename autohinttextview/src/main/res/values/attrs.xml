@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="AutoHintTextView">
+        <attr name="android:entries"/>
+        <attr name="android:gravity"/>
         <attr name="hint" format="string"/>
         <attr name="caseSensitive" format="boolean"/>
         <attr name="android:textSize" format="dimension"/>
         <attr name="android:textColor" format="color"/>
-        <attr name="android:gravity"/>
     </declare-styleable>
 </resources>
