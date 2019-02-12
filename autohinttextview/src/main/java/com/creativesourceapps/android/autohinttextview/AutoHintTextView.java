@@ -129,4 +129,8 @@ public class AutoHintTextView extends LinearLayout {
     public void setSuggestions(ArrayList<String> suggestions) {
         this.suggestions.addAll(suggestions);
     }
+
+    public void addHintChangedListener(TextWatcher textWatcher) {
+        hintEditText.addTextChangedListener(textWatcher);
+    }
 }
