@@ -140,12 +140,14 @@ public class AutoHintTextView extends LinearLayout {
     }
 
     private String searchStrings(String s) {
-        pattern = caseSensitive ? Pattern.compile("^" + s) : Pattern.compile("^" + s, Pattern.CASE_INSENSITIVE);
-        if(!s.equals("")) {
-            for (String i : suggestions) {
-                matcher = pattern.matcher(i);
-                if (matcher.find()) {
-                    return caseSensitive ? i : s + i.substring(s.length());
+        if(!suggestions.isEmpty()) {
+            pattern = caseSensitive ? Pattern.compile("^" + s) : Pattern.compile("^" + s, Pattern.CASE_INSENSITIVE);
+            if (!s.equals("")) {
+                for (String i : suggestions) {
+                    matcher = pattern.matcher(i);
+                    if (matcher.find()) {
+                        return caseSensitive ? i : s + i.substring(s.length());
+                    }
                 }
             }
         }
