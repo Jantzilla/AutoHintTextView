@@ -37,6 +37,14 @@ dependencies {
     autoHintTextView.setSuggestions(suggestions);
 ```
 
+#### Custom Methods
+| Method | Description |
+| --- | --- |
+| `setSuggestions(ArrayList<String> suggestions)`<br/>`setSuggestions(int resId)` | Sets custom hint suggestions |
+| `setCaseSensitive(Boolean boolean)` | Whether or not text case is a suggestion factor |
+| `addHintChangedListener(TextWatcher textWatcher)` | Listens to changes to suggestion hint |
+| `addHintChangedListener(TextWatcher textWatcher)` | Listens to changes to entry text |
+
 ## License
     Copyright 2019 Jantz Carney
     
