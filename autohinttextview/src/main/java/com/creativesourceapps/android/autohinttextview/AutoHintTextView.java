@@ -25,7 +25,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -119,7 +118,11 @@ public class AutoHintTextView extends LinearLayout {
         TypedArray ta = context.obtainStyledAttributes(set, R.styleable.AutoHintTextView);
         CharSequence[] entries = ta.getTextArray(R.styleable.AutoHintTextView_android_entries);
         if (entries != null) {
-            suggestions = new ArrayList<>((Collection<? extends String>) Arrays.asList(entries));
+            suggestions = new ArrayList<>();
+            ArrayList<CharSequence> arrayList = new ArrayList<>(Arrays.asList(entries));
+            for (CharSequence item : arrayList) {
+                suggestions.add(String.valueOf(item));
+            }
         }
         textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "hint";
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
