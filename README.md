@@ -2,6 +2,8 @@
 
 This library allows you to set custom suggestions for hint auto-complete!
 
+![](static/demo.gif)
+
 ## How to
 #### ~Gradle~
 ```Gradle
