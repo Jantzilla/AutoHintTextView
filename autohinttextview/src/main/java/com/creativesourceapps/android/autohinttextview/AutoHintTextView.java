@@ -158,6 +158,10 @@ public class AutoHintTextView extends LinearLayout {
         suggestions = new ArrayList<>(Arrays.asList(getResources().getStringArray(resId)));
     }
 
+    public void setCaseSensitive(Boolean caseSensitive) {
+        this.caseSensitive = caseSensitive;
+    }
+
     public void addHintChangedListener(TextWatcher textWatcher) {
         hintEditText.addTextChangedListener(textWatcher);
     }
