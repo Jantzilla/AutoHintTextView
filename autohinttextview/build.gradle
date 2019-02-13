@@ -1,4 +1,14 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'creativesource'
+    groupId = 'com.creativesource'
+    artifactId = 'autohinttextview'
+    publishVersion = '0.1.0'
+    desc = 'Text field with automatic hints as you type.'
+    website = 'https://github.com/Jantzilla/AutoHintTextView'
+}
 
 android {
     compileSdkVersion 28
