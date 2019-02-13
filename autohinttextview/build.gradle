@@ -3,6 +3,7 @@ apply plugin: 'com.novoda.bintray-release'
 
 publish {
     userOrg = 'creativesource'
+    repoName = 'AutoHintTextView'
     groupId = 'com.creativesource'
     artifactId = 'autohinttextview'
     publishVersion = '0.1.0'
