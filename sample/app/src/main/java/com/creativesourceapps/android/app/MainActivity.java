@@ -29,30 +29,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                switch (String.valueOf(s)) {
-                    case "Blue":
-                        root.setBackgroundColor(Color.BLUE);
-                        break;
-                    case "Green":
-                        root.setBackgroundColor(Color.GREEN);
-                        break;
-                    case "Red":
-                        root.setBackgroundColor(Color.RED);
-                        break;
-                    case "Cyan":
-                        root.setBackgroundColor(Color.CYAN);
-                        break;
-                    case "Gray":
-                        root.setBackgroundColor(Color.GRAY);
-                        break;
-                    case "Yellow":
-                        root.setBackgroundColor(Color.YELLOW);
-                        break;
-                    case "Magenta":
-                        root.setBackgroundColor(Color.MAGENTA);
-                        break;
-                    default:
-                        root.setBackgroundColor(Color.WHITE);
+                if (String.valueOf(s).equalsIgnoreCase("Blue")) {
+                    root.setBackgroundColor(Color.BLUE);
+                } else if (String.valueOf(s).equalsIgnoreCase("Green")) {
+                    root.setBackgroundColor(Color.GREEN);
+                } else if (String.valueOf(s).equalsIgnoreCase("Red")) {
+                    root.setBackgroundColor(Color.RED);
+                } else if (String.valueOf(s).equalsIgnoreCase("Cyan")) {
+                    root.setBackgroundColor(Color.CYAN);
+                } else if (String.valueOf(s).equalsIgnoreCase("Gray")) {
+                    root.setBackgroundColor(Color.GRAY);
+                } else if (String.valueOf(s).equalsIgnoreCase("Yellow")) {
+                    root.setBackgroundColor(Color.YELLOW);
+                } else if (String.valueOf(s).equalsIgnoreCase("Magenta")) {
+                    root.setBackgroundColor(Color.MAGENTA);
+                } else {
+                    root.setBackgroundColor(Color.WHITE);
                 }
             }
 
