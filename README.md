@@ -1,11 +1,11 @@
-# AutoHintTextView - This library is currently in early development stage, and is unavailable at the moment.
+# AutoHintTextView
 
 This library allows you to set custom suggestions for hint auto-complete!
 
 ![](static/demo.gif)
 
 ## How to
-#### ~Gradle~
+#### Gradle
 ```Gradle
 dependencies {
     implementation 'com.creativesource:autohinttextview:1.1.1'
@@ -14,29 +14,50 @@ dependencies {
 
 ### In your XML layout
 ```Xml
-<com.creativesource.autohinttextview.AutoHintTextView
-    android:id="@+id/tv_auto_hint"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:caseSensitive="true"
-    app:setSuggestions="@array/my_array_of_suggestions"
-    />
+<com.creativesourceapps.android.autohinttextview.AutoHintTextView
+        android:id="@+id/tv_auto_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:hint="Type a color"
+        app:caseSensitive="false"
+        android:entries="@array/colors"/>
 ```
 
 #### Custom Attributes
 | Attribute | Description |
 | --- | --- |
 | `caseSensitive` | Whether or not text case is a suggestion factor |
-| `setSuggestions` | Location of suggestion resource array |
+| `entries` | Location of suggestion resource array |
 
 ### In your Java code
 ```Java
     autoHintTextView = (AutoHintTextView) findViewById(R.id.tv_auto_hint);
-    ArrayList<String> suggestions = new ArrayList<>();
-    suggestions.add("Lions");
-    suggestions.add("Tigers");
-    suggestions.add("Bears");
-    autoHintTextView.setSuggestions(suggestions);
+    autoHintTextView.setCaseSensitive(false)
+    autoHintTextView.setSuggestions(R.array.colors);
+    
+    autoHintTextView.addHintChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            
+    //      do stuff            
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            
+    //      do stuff        
+    
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+    //      do stuff        
+
+            }
+        });
 ```
 
 #### Custom Methods
