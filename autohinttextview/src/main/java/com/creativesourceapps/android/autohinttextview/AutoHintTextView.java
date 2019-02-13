@@ -14,7 +14,6 @@ import android.text.SpannableString;
 import android.text.TextWatcher;
 import android.text.style.ForegroundColorSpan;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.inputmethod.EditorInfo;
@@ -34,7 +33,7 @@ public class AutoHintTextView extends LinearLayout {
     Pattern pattern;
     Paint paint;
     Rect rect;
-    int entryEnd, textSize, textColor, textGravity;
+    int entryEnd, textSize, textColor;
     private EditText hintEditText, entryEditText;
     private ArrayList<String> suggestions;
     private String textHint;
@@ -127,14 +126,11 @@ public class AutoHintTextView extends LinearLayout {
         textHint = ta.hasValue(R.styleable.AutoHintTextView_hint) ? ta.getString(R.styleable.AutoHintTextView_hint) : "hint";
         caseSensitive = ta.getBoolean(R.styleable.AutoHintTextView_caseSensitive, true);
         textColor = ta.getColor(R.styleable.AutoHintTextView_android_textColor, Color.BLACK);
-        textGravity = ta.getInteger(R.styleable.AutoHintTextView_android_gravity, Gravity.START);
         textSize = ta.getDimensionPixelSize(R.styleable.AutoHintTextView_android_textSize, (int) (18 * getResources().getDisplayMetrics().scaledDensity));
         entryEditText.setHint(textHint);
         entryEditText.setTextColor(textColor);
         entryEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
         hintEditText.setTextSize(textSize / getResources().getDisplayMetrics().scaledDensity);
-        entryEditText.setGravity(textGravity);
-        hintEditText.setGravity(textGravity);
         ta.recycle();
 
     }
