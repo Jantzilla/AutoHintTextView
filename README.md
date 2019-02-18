@@ -14,7 +14,7 @@ dependencies {
 
 ### In your XML layout
 ```Xml
-<com.creativesourceapps.android.autohinttextview.AutoHintTextView
+<com.creativesourceapps.android.AutoHintTextView
         android:id="@+id/tv_auto_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
