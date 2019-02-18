@@ -22,8 +22,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.creativesource.autohinttextview.autohinttextview.R;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
