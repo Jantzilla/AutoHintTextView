@@ -6,7 +6,7 @@ publish {
     repoName = 'AutoHintTextView'
     groupId = 'com.creativesource'
     artifactId = 'autohinttextview'
-    publishVersion = '0.1.0'
+    publishVersion = '0.1.1'
     desc = 'Text field with automatic hints as you type.'
     website = 'https://github.com/Jantzilla/AutoHintTextView'
 }
