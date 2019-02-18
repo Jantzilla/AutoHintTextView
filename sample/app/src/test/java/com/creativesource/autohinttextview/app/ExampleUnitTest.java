@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.autohinttextview;
+package com.creativesource.autohinttextview.app;
 
 import org.junit.Test;
 

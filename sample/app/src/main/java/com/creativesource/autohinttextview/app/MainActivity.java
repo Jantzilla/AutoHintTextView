@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.app;
+package com.creativesource.autohinttextview.app;
 
 import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 
-import com.creativesourceapps.android.autohinttextview.AutoHintTextView;
+import com.creativesource.autohinttextview.AutoHintTextView;
 
 public class MainActivity extends AppCompatActivity {
     ConstraintLayout root;

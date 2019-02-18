@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.autohinttextview;
+package com.creativesource.autohinttextview;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -21,6 +21,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.creativesource.autohinttextview.autohinttextview.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

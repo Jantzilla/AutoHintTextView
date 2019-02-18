@@ -1,4 +1,4 @@
-package com.creativesourceapps.android.app;
+package com.creativesource.autohinttextview.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

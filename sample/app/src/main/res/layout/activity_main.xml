@@ -5,9 +5,9 @@
     android:id="@+id/cl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.creativesourceapps.android.app.MainActivity">
+    tools:context="com.creativesource.autohinttextview.app.MainActivity">
 
-    <com.creativesourceapps.android.autohinttextview.AutoHintTextView
+    <com.creativesource.autohinttextview.AutoHintTextView
         android:id="@+id/tv_auto_hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
