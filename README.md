@@ -8,7 +8,7 @@ This library allows you to set custom suggestions for hint auto-complete!
 #### Gradle
 ```Gradle
 dependencies {
-    implementation 'com.creativesource:autohinttextview:1.1.1'
+    implementation 'com.creativesource:autohinttextview:0.1.0'
 }
 ```
 
